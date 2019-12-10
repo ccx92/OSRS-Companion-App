@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title></title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" type="text/css" href="css/rscompanionapp.css" />
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAaeq_V2dCykTZeVxI3puE9CveLrN2j3Og",
+            authDomain: "runescape-companion-app.firebaseapp.com",
+            databaseURL: "https://runescape-companion-app.firebaseio.com",
+            projectId: "runescape-companion-app",
+            storageBucket: "runescape-companion-app.appspot.com",
+            messagingSenderId: "1018461035899"
+        };
+        firebase.initializeApp(config);
+</script>
+<script src="authentication.js"></script>
+<script src="storage.js"></script>
+<script src="js/jq/jquery-1.11.1.min.js"></script>
+<script src="js/jq/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<!-- HomePage -->
+<div data-role="page" id="homepage">
+    <div data-role="header">
+        <h1>OSRS PvM Tool</h1>
+        <a href="#userArea" data-icon="user" data-iconpos="notext"></a>
+        <a href="#help" data-icon="info" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+		<img src="images/osrstitle.png">
+        <br>
+        <br>
+        <a href="#guides"><img src="images/osrsguides.jpg"width=160 data-role="button"></a>
+        <a href="#extras"><img src="images/osrsextras.jpg"width=160 data-role="button"></a>
+        <br>
+        <h2>Latest News</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+                <div id="rssincl-box-container-1210180"></div>
+                    <script type="text/javascript">
+                        (function() {
+                        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+                        s.src = 'http://output30.rssinclude.com/output?type=asyncjs&id=1210180&hash=d04610f12d90a72934b78103d2460b66';
+                        document.getElementsByTagName('head')[0].appendChild(s);
+                    })();
+                </script>
+                <br>
+        </div>
+    </div>
+</div>
+
+
+<!--PvM Guides Page-->
+<div data-role="page" id="guides">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+        <h2>PvM Guides</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+        <a href="#kalphiteQueen"><img src="images/kaphitequeen.jpg"width=160 data-role="button"></a>
+        <a href="#kingblackdragon"><img src="images/kingblackdragon1.jpg"width=160 data-role="button"></a>
+        <a href="#chaosElemental"><img src="images/chaoselemental.jpg"width=160 data-role="button"></a>
+        <a href="#dagannothKings"><img src="images/dagannothkings.jpg"width=160 data-role="button"></a>
+        <a href="#giantMole"><img src="images/giantmole.jpg"width=160 data-role="button"></a>
+        <a href="#corporealBeast"><img src="images/corporealbeast.jpg"width=160 data-role="button"></a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--Kalphite Queen Guide-->
+<div data-role="page" id="kalphiteQueen">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+        <h2>Kalphate Queen Guide</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+        <a href="#kq1" title="1. Getting There"><img src="images/step1.jpg"width=160></a>
+        <a href="#kq2" title="2. The Fight"><img src="images/step2.jpg"width=160></a>
+        <a href="#kq3" title="3. Recommended Skills"><img src="images/step3.jpg"width=160></a>
+        <a href="#kq4" title="4. Equipment"><img src="images/step4.jpg"width=160></a>
+        <a href="#kq5" title="5. Loot"><img src="images/step5.jpg"width=160></a>
+        <a href="#kq6" title="6. References"><img src="images/step6.jpg"width=160></a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--KQ 1. Getting There-->
+<div data-role="page" id="kq1">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <div data-role="collapsible">
+            <h2>Getting There</h2>
+            <p>The Kalphite Queen is located at the end of the Kalphite Lair in the Kharidian Desert.
+                <br>
+                <br>
+                From the surface area, players go west of the Shantay Pass until they find a bulging tunnel; this is where a rope is needed for players. From the dungeon area, walk south through the tunnel to reach the lair; another rope is needed here.</p>
+            <div align="center">
+                <a href="#popupkqloc" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/kqlairloc.JPG" alt="" style="width:30%"></a>
+                <a href="#popupkqdirections" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/kqlairmap.jpg" alt="" style="width:30%"></a>
+                <div data-role="popup" id="popupkqloc" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/kqlairloc.JPG" style="max-height:512px;" alt="">
+                </div>
+                <div data-role="popup" id="popupkqdirections" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/kqlairmap.jpg" style="max-height:512px;" alt="">
+                </div>
+            </div>
+        </div>
+        <div data-role="collapsible">
+            <h2>Extra Information</h2>
+            <p>Once in the lair, players will go around a fairly large tunnel section with hostile soldiers, which can poison if they damage you (Diary Shortcut take you straight to the guardians).
+                <br>
+                <br>
+                At the end is a chamber with two Kalphite guardians and another bulging tunnel; this is where the other rope is used. Like the soldiers, the guardians can poison, so being under the effects of an anti-poison potion is recommended so the player does not get hit with poison while fighting the Queen.
+                <br>
+                <br>
+                After going down, there is another set of guardians. On the other side is the Queen; drink potions and put on protection prayers before charging in.</p>
+        </div>
+    </div>
+</div>
+
+<!--KQ 2. The Fight-->
+<div data-role="page" id="kq2">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <div data-role="collapsible">
+            <h2>Background</h2>
+            <p>The Kalphite Queen, like most other bosses, has 255 Hitpoints.
+                <br>
+                <br>
+                Her Magic and Ranged attacks have 100% accuracy, though it is possible for the attack to deal no damage instead.
+                <br>
+                <br>
+                Her Melee attack does not share this unique mechanic, and is treated as a standard attack. Unlike the soldiers and guardians, this melee attack does not poison.</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h2>Phases</h2>
+            <p>There are two phases of the fight, similar to Vet'ion. While in her grounded form, the Kalphite Queen has Protect from Magic and Protect from Missiles active; however, they only add increased Defence to those styles rather than full immunity like the player versions of it.
+                <br>
+                <br>
+                When she falls to zero health in her first form, her chitin will crack open and the second form, a wasp-like creature, will appear. This airborne form has Protect from Melee active; however, like the first form, this only provides increased Defence.
+                <br>
+                <br>
+                Note: Upon triggering the second form, there is a time limit of 5 minutes for defeating it. If not defeated within this time frame, the Kalphite Queen returns to the first form, though she carries the health she had left on her second form when she reverted back.</p>
+        </div>
+    </div>
+</div>
+
+<!--KQ 3. Recommended Skills-->
+<div data-role="page" id="kq3">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <div align="center">
+        <h2>Suggested Skills</h2>
+            <img src="images/pixel%20art/combat/kqskillreq.JPG">
+        </div>
+    </div>
+</div>
+
+<!--KQ 4. Equipment-->
+<div data-role="page" id="kq4">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <div data-role="collapsible">
+            <h2>Max Damage Per Second (DPS)</h2>
+            <div align="center">
+                <h2>First Phase</h2>
+            </div>
+            <p>During the first phase, Protect from Magic is recommended. Also, Piety is strongly recommended to speed up kills. Conserve food by running underneath her while healing rather than eating in the open, and use her minions or walls to restrict her movement. Immediately run under her again after killing off her first phase, heal up, and prepare for the second phase.</p>
+            <div align="center">
+                <h2>Second Phase</h2>
+            </div>
+            <p>During the second phase, it doesn't really matter whether you pray Protect from Magic or Protect from Missiles, just make sure to stand in melee range to reduce their frequency. It's recommended to walk under her as soon as this phase begins, otherwise she will get an extra attack on you first. Also, Eagle Eye or Rigour is strongly recommended to speed up kills. Conserve food by running underneath her while healing rather than eating in the open, and use her minions or walls to restrict her movement.</p>
+            <div align="center">
+                <h3>Recommended Gear & Inventory</h3>
+            <a href="#popupmaxdpskqgear" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/pixel%20art/combat/maxdpskqgear.JPG"  alt="" style="width:30%"></a>
+            <a href="#popupmaxdpskqgear2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/pixel%20art/combat/maxdpskqgear2.JPG"  alt="" style="width:30%"></a>
+            <a href="#popupmaxdpskqinvent" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/pixel%20art/combat/maxdpskqinvent.JPG"  alt="" style="width:30%"></a>
+            <div data-role="popup" id="popupmaxdpskqgear" data-overlay-theme="b" data-theme="b" data-corners="false">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/pixel%20art/combat/maxdpskqgear.JPG" style="max-height:512px;" alt="">
+            </div>
+            <div data-role="popup" id="popupmaxdpskqgear2" data-overlay-theme="b" data-theme="b" data-corners="false">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/pixel%20art/combat/maxdpskqgear2.JPG" style="max-height:512px;" alt="">
+            </div>
+            <div data-role="popup" id="popupmaxdpskqinvent" data-overlay-theme="b" data-theme="b" data-corners="false">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/pixel%20art/combat/maxdpskqinvent.JPG" style="max-height:512px;" alt="">
+            </div>
+            </div>
+
+        </div>
+
+        <div data-role="collapsible">
+            <h2>Diary Method</h2>
+            <div align="center">
+                <h2>First Phase</h2>
+            </div>
+            <p>During the first phase, Protect from Magic is recommended. Also, Piety is strongly recommended to speed up kills. Conserve food by running underneath her while healing rather than eating in the open, and use her minions or walls to restrict her movement. Immediately run under her again after killing off her first phase, heal up, and prepare for the second phase.</p>
+            <div align="center">
+                <h2>Second Phase</h2>
+            </div>
+            <p>During the second phase, it doesn't really matter whether you pray Protect from Magic or Protect from Missiles, just make sure to stand in melee range to reduce their frequency. It's recommended to walk under her as soon as this phase begins, otherwise she will get an extra attack on you first. Also, Eagle Eye or Rigour is strongly recommended to speed up kills. Conserve food by running underneath her while healing rather than eating in the open, and use her minions or walls to restrict her movement.</p>
+            <div align="center">
+                <h3>Recommended Gear</h3>
+                <a href="#popupdiarykqgear" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/pixel%20art/combat/diarykqgear.JPG"  alt="" style="width:30%"></a>
+                <a href="#popupdiarykqinvent" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/pixel%20art/combat/diarykqinvent.JPG"  alt="" style="width:30%"></a>
+                <div data-role="popup" id="popupdiarykqgear" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/pixel%20art/combat/diarykqgear.JPG" style="max-height:512px;" alt="">
+                </div>
+                <div data-role="popup" id="popupdiarykqinvent" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/pixel%20art/combat/diarykqinvent.JPG" style="max-height:512px;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--KQ 5. Loot-->
+<div data-role="page" id="kq5">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <table data-role="table" class="ui-responsive">
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Image</th>
+                <th>Obtained?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Dragon Chainbody</td>
+                <td><img src="images/pixel%20art/kalphite%20queen/Dragon%20chainbody.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Dragon 2H Sword</td>
+                <td><img src="images/pixel%20art/kalphite%20queen/Dragon%202h%20sword.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Jar of Sand</td>
+                <td><img src="images/pixel%20art/kalphite%20queen/Jar%20of%20sand.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Kq Head</td>
+                <td><img src="images/pixel%20art/kalphite%20queen/Kq%20head.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Kalphite Princess</td>
+                <td><img src="images/pixel%20art/kalphite%20queen/Kalphite%20princess.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--KQ 6. References-->
+<div data-role="page" id="kq6">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <div align="center">
+            <h2>References</h2>
+            <div data-role="container" align="center" style="background-color: darkkhaki">
+                <br>
+            <a href="https://oldschool.runescape.wiki/w/Kalphite_Queen/Strategies">Old School RuneScape Wiki: Kalphite Queen Strategies</a>
+            <br>
+            <br>
+            <iframe width="300" height="315" src="https://www.youtube.com/embed/LbhZCGas5RU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--King Black Dragon Guide-->
+<div data-role="page" id="kingblackdragon">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+        <h2>King Black Dragon Guide</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+        <a href="#kbd1" title="1. Getting There"><img src="images/step1.jpg"width=160></a>
+        <a href="#kbd2" title="2. The Fight"><img src="images/step2.jpg"width=160></a>
+        <a href="#kbd3" title="3. Recommended Skills"><img src="images/step3.jpg"width=160></a>
+        <a href="#kbd4" title="4. Equipment"><img src="images/step4.jpg"width=160></a>
+        <a href="#kbd5" title="5. Loot"><img src="images/step5.jpg"width=160></a>
+        <a href="#kbd6" title="6. References"><img src="images/step6.jpg"width=160></a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--KBD 1. Getting There-->
+<div data-role="page" id="kbd1">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--KBD 2. The Fight-->
+<div data-role="page" id="kbd2">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--KBD 3. Recommended Skills-->
+<div data-role="page" id="kbd3">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--KBD 4. Equipment-->
+<div data-role="page" id="kbd4">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--KBD 5. Loot-->
+<div data-role="page" id="kbd5">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <table data-role="table" class="ui-responsive">
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Image</th>
+                <th>Obtained?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Dragon Med Helm</td>
+                <td><img src="images/pixel art/king black dragon/Dragon%20med%20helm.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Dragon Pickaxe</td>
+                <td><img src="images/pixel%20art/king%20black%20dragon/Dragon%20pickaxe.png"></tr>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Draconic Visage</td>
+                <td><img src="images/pixel art/king black dragon/Draconic visage.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Kbd Heads</td>
+                <td><img src="images/pixel art/king black dragon/Kbd heads.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Prince Black Dragon</td>
+                <td><img src="images/pixel art/king black dragon/Prince black dragon.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--KBD 6. References-->
+<div data-role="page" id="kbd6">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+
+
+<!--Chaos Elemental Guide-->
+<div data-role="page" id="chaosElemental">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+        <h2>Chaos Elemental Guide</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+        <a href="#ce1" title="1. Getting There"><img src="images/step1.jpg"width=160></a>
+        <a href="#ce2" title="2. The Fight"><img src="images/step2.jpg"width=160></a>
+        <a href="#ce3" title="3. Recommended Skills"><img src="images/step3.jpg"width=160></a>
+        <a href="#ce4" title="4. Equipment"><img src="images/step4.jpg"width=160></a>
+        <a href="#ce5" title="5. Loot"><img src="images/step5.jpg"width=160></a>
+        <a href="#ce6" title="6. References"><img src="images/step6.jpg"width=160></a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--CE 1. Getting There-->
+<div data-role="page" id="ce1">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CE 2. The Fight-->
+<div data-role="page" id="ce2">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CE 3. Recommended Skills-->
+<div data-role="page" id="ce3">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CE 4. Equipment-->
+<div data-role="page" id="ce4">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CE 5. Loot-->
+<div data-role="page" id="ce5">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <table data-role="table" class="ui-responsive">
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Image</th>
+                <th>Obtained?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Dragon Dagger</td>
+                <td><img src="images/pixel art/chaos elemental/Dragon dagger.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Dragon 2H Sword</td>
+                <td><img src="images/pixel art/kalphite queen/Dragon 2h sword.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Dragon Pickaxe</td>
+                <td><img src="images/pixel art/king black dragon/Dragon pickaxe.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Pet Chaos Elemental</td>
+                <td><img src="images/pixel art/chaos elemental/Pet chaos elemental.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--CE 6. References-->
+<div data-role="page" id="ce6">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+
+
+<!--King Dagannoths Guide-->
+<div data-role="page" id="dagannothKings">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+        <h2>King Dagannoths Guide</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+        <a href="#dks1" title="1. Getting There"><img src="images/step1.jpg"width=160></a>
+        <a href="#dks2" title="2. The Fight"><img src="images/step2.jpg"width=160></a>
+        <a href="#dks3" title="3. Recommended Skills"><img src="images/step3.jpg"width=160></a>
+        <a href="#dks4" title="4. Equipment"><img src="images/step4.jpg"width=160></a>
+        <a href="#dks5" title="5. Loot"><img src="images/step5.jpg"width=160></a>
+        <a href="#dks6" title="6. References"><img src="images/step6.jpg"width=160></a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--DKS 1. Getting There-->
+<div data-role="page" id="dks1">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--DKS 2. The Fight-->
+<div data-role="page" id="dks2">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--DKS 3. Recommended Skills-->
+<div data-role="page" id="dks3">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--DKS 4. Equipment-->
+<div data-role="page" id="dks4">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--DKS 5. Loot-->
+<div data-role="page" id="dks5">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <table data-role="table" class="ui-responsive">
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Image</th>
+                <th>Obtained?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Seercull</td>
+                <td><img src="images/pixel art/dagannoth kings/Seercull.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Archer Ring</td>
+                <td><img src="images/pixel art/dagannoth kings/Archers ring.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Pet Dagannoth Supreme</td>
+                <td><img src="images/pixel art/dagannoth kings/Pet dagannoth supreme.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Mud Battlestaff</td>
+                <td><img src="images/pixel art/dagannoth kings/Mud battlestaff.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Seers Ring</td>
+                <td><img src="images/pixel art/dagannoth kings/Seers ring.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Pet Dagannoth Prime</td>
+                <td><img src="images/pixel art/dagannoth kings/Pet dagannoth prime.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Warrior Ring</td>
+                <td><img src="images/pixel art/dagannoth kings/Warrior ring.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Berserker Ring</td>
+                <td><img src="images/pixel art/dagannoth kings/Berserker ring.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Pet Dagannoth Rex</td>
+                <td><img src="images/pixel art/dagannoth kings/Pet dagannoth rex.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--DKS 6. References-->
+<div data-role="page" id="dks6">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+
+
+<!--Giant Mole Guide-->
+<div data-role="page" id="giantMole">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+        <h2>Giant Mole Guide</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+        <a href="#gm1" title="1. Getting There"><img src="images/step1.jpg"width=160></a>
+        <a href="#gm2" title="2. The Fight"><img src="images/step2.jpg"width=160></a>
+        <a href="#gm3" title="3. Recommended Skills"><img src="images/step3.jpg"width=160></a>
+        <a href="#gm4" title="4. Equipment"><img src="images/step4.jpg"width=160></a>
+        <a href="#gm5" title="5. Loot"><img src="images/step5.jpg"width=160></a>
+        <a href="#gm6" title="6. References"><img src="images/step6.jpg"width=160></a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--GM 1. Getting There-->
+<div data-role="page" id="gm1">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <li>
+        <li> The Kalphite Queen is located at the end of the Kalphite Lair in the Desert.</li>
+        <li> The Lair can be reached by going west from Shanty Pass.</li>
+        <li> The player will need a rope to enter the hole</li>
+        <br>
+        <div align="center">
+            <p>A map of the lair.</p>
+            <img src="images/kqlairmap.jpg"width=160>
+        </div><br>
+        Once in the lair, players will go around a fairly large tunnel section with hostile soldiers, which can poison if they damage you. At the end is a chamber with two Kalphite guardians and another bulging tunnel; this is where the other rope is used. Like the soldiers, the guardians can poison, so being under the effects of an anti-poison potion is recommended so the player does not get hit with poison while fighting the Queen.
+
+        After going down, there is another set of guardians. On the other side is the Queen; drink potions and put on protection prayers before charging in.</p>
+    </div>
+</div>
+
+<!--GM 2. The Fight-->
+<div data-role="page" id="gm2">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--GM 3. Recommended Skills-->
+<div data-role="page" id="gm3">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--GM 4. Equipment-->
+<div data-role="page" id="gm4">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--GM 5. Loot-->
+<div data-role="page" id="gm5">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <table data-role="table" class="ui-responsive">
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Image</th>
+                <th>Obtained?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Baby Mole</td>
+                <td><img src="images/pixel art/giant mole/Baby mole.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--GM 6. References-->
+<div data-role="page" id="gm6">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+
+
+<!--Corporeal Beast Guide-->
+<div data-role="page" id="corporealBeast">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content" align="center">
+        <h2>Corporeal Beast Guide</h2>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <br>
+        <a href="#cb1" title="1. Getting There"><img src="images/step1.jpg"width=160></a>
+        <a href="#cb2" title="2. The Fight"><img src="images/step2.jpg"width=160></a>
+        <a href="#cb3" title="3. Recommended Skills"><img src="images/step3.jpg"width=160></a>
+        <a href="#cb4" title="4. Equipment"><img src="images/step4.jpg"width=160></a>
+        <a href="#cb5" title="5. Loot"><img src="images/step5.jpg"width=160></a>
+        <a href="#cb6" title="6. References"><img src="images/step6.jpg"width=160></a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!--CB 1. Getting There-->
+<div data-role="page" id="cb1">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CB 2. The Fight-->
+<div data-role="page" id="cb2">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CB 3. Recommended Skills-->
+<div data-role="page" id="cb3">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CB 4. Equipment-->
+<div data-role="page" id="cb4">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+<!--CB 5. Loot-->
+<div data-role="page" id="cb5">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <table data-role="table" class="ui-responsive">
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Image</th>
+                <th>Obtained?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Spirit Shield</td>
+                <td><img src="images/pixel art/corporeal beast/Spirit shield.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Holy Elixir</td>
+                <td><img src="images/pixel art/corporeal beast/Holy elixir.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Spectral Sigil</td>
+                <td><img src="images/pixel art/corporeal beast/Spectral sigil.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Arcane Sigil</td>
+                <td><img src="images/pixel art/corporeal beast/Arcane sigil.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Elysian Sigil</td>
+                <td><img src="images/pixel art/corporeal beast/Elysian sigil.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            <tr>
+                <td>Pet Dark Core</td>
+                <td><img src="images/pixel art/corporeal beast/Pet dark core.png"></td>
+                <td>
+                    <input type="checkbox" name="checkbox-0" data-mini="true">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--CB 6. References-->
+<div data-role="page" id="cb6">
+
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+</div>
+
+
+
+
+<!--Sign In/Sign Up Page-->
+<div data-role="page" id="userArea">
+    <div data-role="header">
+        <h1>Sign in or Sign up</h1>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+    </div>
+
+    <div data-role="collapsible" id="login_div" class="main-div">
+        <h3>Sign In</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+
+        <button onclick="login()">Login to Account</button>
+    </div>
+
+    <div data-role="content" align="center" id="user_div" class="loggedin-div">
+        <h3>You are Logged In</h3>
+        <p id="user_para">You're currently logged in. Click here to Logout.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div data-role="collapsible" id="new_div" class="newloggedin-div">
+        <h5>Sign Up</h5>
+        <input type="email" placeholder="Email..." id="newemail_field" />
+        <input type="password" placeholder="Password..." id="newpassword_field" />
+
+        <button onclick="signUp()">Create Account</button>
+    </div>
+
+    <div data-role="content" id="uploaddiv" align="center">
+        <h3>File Upload</h3>
+        <input type="file" class="upload" id="upload_file" size="50" name="icon" onchange="loadFile(this);" >
+            <hr>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+    </div>
+</div>
+
+<!--Help Page-->
+<div data-role="page" id="help">
+    <div data-role="header">
+        <h2>Help Page</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <div data-role="collapsible">
+            <h5>About</h5>
+            <p>This app was developed by Paul Walker for their Advanced Programming for Mobile Devices Module while attending The University of the West of Scotland.
+                <br>
+                <br>
+                This app is designed as a companion styled guide for killing specific monsters on Old School RuneScape.</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h5>How was it made?</h5>
+            <p>The app was made using HTML5, CSS, JavaScript, jQuery and jQuery Mobile plus resources including JetBrains's WebStorm and Google's Firebase.</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h5>Navigation</h5>
+            <p>To navigate around this application, use the buttons in the header or footer of the page.
+                <br>
+                <br>
+                Users can also click image buttons within the app to navigate to specific areas. To return to the homepage, please select the home button in the header of the page.</p>
+        </div>
+        <div data-role="collapsible">
+            <h5>Hyperlinks</h5>
+            <p>This application uses external sources, some hyperlinks may be vague such as image hyperlinks, to use them simply select the image
+                and you will be redirected to the linked location.</p>
+        </div>
+        <div data-role="collapsible">
+            <h5>User Accounts</h5>
+            <p>Some features within this application require an account to use.
+                <br>
+                <br>
+                To create an account, select the User button on the top left corner of the homepage. Here you have the option to sign in if you already have an account or you may register one.
+                <br>
+                <br>
+                User accounts require an email and password to be created, once entered select the button below to create your account and sign in.
+                To logout, select the logout button.</p>
+        </div>
+    </div>
+</div>
+
+<!--Extras Page-->
+<div data-role="page" id="extras">
+    <div data-role="header">
+        <h2>OSRS PvM Tool</h2>
+        <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        <a href="#homepage" data-icon="home" data-iconpos="notext"></a>
+    </div>
+
+    <div data-role="content">
+        <div align="center">
+        <h2>Extra Links</h2>
+        </div>
+        <div data-role="container" align="center" style="background-color: darkkhaki">
+            <div style="color:black">
+                <div style="font-family: 'Times New Roman';">
+            <p>Use these services if you wish to learn more information about killing any monsters or the game itself.</p>
+            <a href="https://www.reddit.com/r/2007scape/"><img src="images/osrsreddit.jpg" width="160"></a>
+            <a href="https://oldschool.runescape.wiki/"><img src="images/osrswiki.jpg" width="160"></a>
+            <a href="https://oldschool.tools/"><img src="images/osrstools.jpg" width="160"></a>
+            <a href="https://oldschool.runescape.com/"><img src="images/osrswebsite.jpg" width="160"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

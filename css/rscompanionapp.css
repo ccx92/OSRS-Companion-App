@@ -1,0 +1,311 @@
+#homepage .ui-controlgroup{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+#errorText{
+    color: red;
+    font: bold 20px arial;
+}
+
+.ui-icon-search:after{
+    width: 41px ;
+    height: 41px ;
+    top: 25%;
+    left: 25%;
+}
+
+.ui-icon-star:after{
+    width: 41px ;
+    height: 41px ;
+    top: 25%;
+    left: 25%;
+}
+
+table{
+    font-family: "poor richard";
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, th{
+    font-size: 1.3em;
+    border: 1px solid #ffffff;
+    padding: 3px 7px 2px 7px;
+}
+
+table th{
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    margin-bottom: 7px !important;
+    background-color: rgba(47,48,47,0.79);
+    color: #ffffff;
+}
+
+table tr{
+    color: white;
+    background-color: slategray;
+    font-family: "poor richard";
+    border: 2px solid darkred;
+    padding: 10px 40px;
+    background: gray;
+    border-radius: 25px;
+}
+
+
+li.selected{
+    background-color: #1baeff;
+    border-radius: inherit;
+}
+
+#footer{
+    background-color: #0b1572 !important;
+}
+
+
+#myPanel{
+    background-color: khaki;
+
+}
+
+#myCanvas{
+    background-color: khaki;
+    color: darkred;
+}
+
+
+
+/* Buttons*/
+.ui-btn,
+label.ui-btn {
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    font-family: "poor richard";
+}
+
+.ui-btn {
+    text-decoration: none !important;
+}
+
+.ui-btn-active {
+    cursor: pointer;
+}
+
+.ui-corner-all {
+    -webkit-border-radius: .6em;
+    border-radius: .6em;
+}
+
+.ui-btn-corner-all,
+.ui-btn.ui-corner-all,
+.ui-slider-track.ui-corner-all,
+.ui-flipswitch.ui-corner-all,
+
+.ui-li-count {
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+}
+
+
+.ui-btn-icon-notext.ui-btn-corner-all,
+.ui-btn-icon-notext.ui-corner-all {
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+}
+
+.ui-btn-corner-all,
+.ui-corner-all {
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.ui-popup.ui-corner-all > .ui-popup-arrow-guide {
+    left: .6em;
+    right: .6em;
+    top: .6em;
+    bottom: .6em;
+}
+
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+html head + body .ui-btn.ui-btn-a,
+
+
+.ui-page-theme-a .ui-btn:visited,
+html .ui-bar-a .ui-btn:visited,
+html .ui-body-a .ui-btn:visited,
+html body .ui-group-theme-a .ui-btn:visited,
+html head + body .ui-btn.ui-btn-a.ui-btn:visited {
+    background-color: darkred;
+    border-color: #1a000d;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+}
+
+
+.ui-page-theme-a .ui-btn:hover,
+html .ui-bar-a .ui-btn:hover,
+html .ui-body-a .ui-btn:hover,
+html body .ui-group-theme-a .ui-btn:hover,
+html head + body .ui-btn.ui-btn-a:hover{
+    background-color: darkred;
+    border-color: #1a000d;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+}
+
+
+.ui-page-theme-a .ui-btn:active,
+html .ui-bar-a .ui-btn:active,
+html .ui-body-a .ui-btn:active,
+html body .ui-group-theme-a .ui-btn:active,
+html head + body .ui-btn .ui-btn-a:active  {
+    background-color: indianred;
+    border-color: white;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+
+
+
+
+/* HEADER */
+.ui-bar-a,
+.ui-page-theme-a .ui-bar-inherit,
+html .ui-bar-a .ui-bar-inherit,
+html .ui-body-a .ui-bar-inherit,
+html body .ui-group-theme-a .ui-bar-inherit {
+    background-color: rgba(47,48,47,0.79);
+    border-color: darkred;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #000000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "poor richard";
+}
+
+.ui-bar-a {
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+
+
+
+/* MAIN PAGE */
+/* Navigation Menu */
+.ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a,
+.ui-panel-wrapper {
+    background-image: url("../images/osrsbackground.jpg");
+    background-size: 100%;
+    background-color: darkslategray;
+    border-color: yellow;
+    color: white;
+    font-family: "poor richard";
+    font-weight: bold;
+    text-shadow: 0 1px 0 #000000;
+}
+
+.ui-body-a,
+.ui-page-theme-a .ui-body-inherit,
+html .ui-bar-a .ui-body-inherit,
+html .ui-body-a .ui-body-inherit,
+html body .ui-group-theme-a .ui-body-inherit,
+html .ui-panel-page-container-a {
+    background-color: darkkhaki;
+    border-color: #1a000d;
+    color: black;
+    font-family: "Arial";
+    font-weight: normal;
+    text-shadow: 0 1px 0 #000000;
+}
+
+.ui-body-a {
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+
+
+/* Button Scenarios */
+.ui-page-theme-a a,
+html .ui-bar-a a,
+html .ui-body-a a,
+html body .ui-group-theme-a a{
+    color: darkred;
+    font-family: "poor richard";
+    font-size: 20px;
+}
+
+.ui-page-theme-a a:visited,
+html .ui-bar-a a:visited,
+html .ui-body-a a:visited,
+html body .ui-group-theme-a a:visited{
+    color: darkred;
+    font-family: "poor richard";
+}
+
+.ui-page-theme-a a:hover,
+html .ui-bar-a a:hover,
+html .ui-body-a a:hover,
+html body .ui-group-theme-a a:hover{
+    color: indianred;
+    font-family: "poor richard";
+}
+
+.ui-page-theme-a a:active,
+html .ui-bar-a a:active,
+html .ui-body-a a:active,
+html body .ui-group-theme-a a:active{
+    color: indianred;
+    font-family: "poor richard";
+}
+
+body{
+    background:#e6e6e6;
+}
+.main
+{
+    background:none;
+    width:30%;
+    padding:60px;
+}
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+    text-align: center;
+}
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.rss {
+    position: absolute;
+
+}
+.content {
+    text-decoration-color: darkgoldenrod;
+    position: absolute;
+
+}
+.contentbox {
+    background-color: darkkhaki;
+    font-family: "Times New Roman";
+}
